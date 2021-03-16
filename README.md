@@ -13,5 +13,4 @@ Revisar rango0 antes de ejecutar el codigo, asegurarse de descargar la data del 
 Pre-requisito: descargar data.nc (archivo de batimetria).
 Se utiliza el paquete libre Ocean data climate toolbox (comando cmocean) para los colores de la batimetria, este se puede adquirir gratis de add-ons.
  
-4.Argo_ecuador_perfiles---aprender a hacer debug de este codigo.
-Siempre revisar que los valores de salinidad y temperatura esten dentro del rango conocido y sean coherentes con la profundidad. 
+4.Argo_ecuador_perfiles---revisar que los valores de salinidad y temperatura esten dentro del rango conocido y sean coherentes con la profundidad. 
