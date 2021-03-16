@@ -7,19 +7,10 @@ hdir=dir(fullfile(path01,'20*'));
 
 %flotadores con data fuera del rango de salinidad
 %  hdir(5)=[];
-%  hdir(16) = [];
-%  hdir(22) = [];
-%  hdir(48)=[];
-%  hdir(50)=[];
-%  hdir(71)=[];
-%  hdir(75)=[];
-%  hdir(101)=[];
-%  hdir(110)=[];
-%  hdir(114:116)=[];
-%  hdir(48)=[];
+%  
 iter=0;
 
-%S=1; %%%Check the while statement instead of the for%% if fname=0
+%Loop
 for ifloat=1:1:size(hdir,1)
     fname=hdir(ifloat).name;
    load(fname)
@@ -52,8 +43,7 @@ for ifloat=1:1:size(hdir,1)
      end
     
 end
-%Create a j=0, then create a 2nd ~isempty with indx2, repeat this or find
-%another way 
+%Create a j=0, 
 %lon(lon<0)=lon(lon<0)+360;
 lono=nanmean(lon,1);
 % nonan_logical=isnan(lon);
@@ -132,13 +122,7 @@ t=text(153,-25,'B','fontsize',15,'color','w');
 
 
 % saveas(gcf,'Salinidad Subsuperficial 150E-90W.jpg','jpg');
-% 
-% figure
-% P=get(gcf,'position');
-% P(3)=P(3)*2.5;
-% P(4)=P(4)*0.7;
-% set(gcf,'position',P);
-% set(gcf,'PaperPositionMode','auto');
+
 
 subplot(3,1,1)
 [C,h]=contourf(lonb,-pres3(:,1),sigma3,[20:0.5:30],':');h.LevelList=round(h.LevelList,1);
@@ -158,12 +142,7 @@ t=text(153,-25,'A','fontsize',15,'color','w');
 
 [loni,presi]=meshgrid(lonb,pres3(:,1));
 
-% figure
-% P=get(gcf,'position');
-% P(3)=P(3)*2.5;
-% P(4)=P(4)*0.7;
-% set(gcf,'position',P);
-% set(gcf,'PaperPositionMode','auto');
+
 subplot(3,1,3)
 pcolor(lonb,sigma3,sal3);
 hold on
