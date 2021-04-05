@@ -4,7 +4,7 @@ close all
 clc; 
 ftpobj1=ftp('ftp.ifremer.fr');
 yy=2021;
-mm=2;
+mm=3;
 dast=15;%dia de inicio 
 folder=sprintf('ifremer/argo/geo/pacific_ocean/%d/%02d',yy,mm);
 hdir=dir(ftpobj1,folder);
